@@ -3,10 +3,7 @@ char board[3][3] = {
     {'1', '2', '3'},
     {'4', '5', '6'},
     {'7', '8', '9'}};
-/*
-win cons 
-0-1-2, 10-11-12,20-21-22, 0-10-20, 1-11-20, 2-12-22, 0-11-22, 2-11-20
- */
+
 char winCheck(char board[3][3])
 {
     char winner = '0';
@@ -45,7 +42,7 @@ char winCheck(char board[3][3])
         if (found == 0)
             winner = 'D';
     }
-    //printf("\nwincheck %c\n", winner);
+
     return winner;
 }
 void drawBoard(char board[3][3])
@@ -59,11 +56,9 @@ void drawBoard(char board[3][3])
 int playerMove(char board[3][3])
 {
     unsigned move = 0;
-
     printf("please choose a move 1-9\n");
     scanf("%i", &move);
     return move;
-    //1-3, 4-6, 7-9
 }
 int main()
 {
@@ -138,9 +133,6 @@ int main()
             break;
         }
     }
-    
-    
-    // 1. Draw board. 2. player move. 3. check for win. 4 end game if win.
-
+ 
     return 0;
 }
